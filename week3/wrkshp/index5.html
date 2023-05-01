@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> this is an example of ading multiple eents to the same element.</p>
+    <p> click the following button to see the effect.</p>
+    <button id = "btn"> Click me</button>
+    <p id = "p"></p>
+    <p id = "p1"></p>
+    <script>
+        function fun(){
+            alert("welcome !!!");
+        }
+        function fun1(){
+            document.getElementById("p").innerHTML= "this is second function";
+        }
+        function fun2(){
+            document.getElementById("p1").innerHTML= "this is third function";
+        }
+        var mybtn = document.getElementById("btn");
+        mybtn.addEventListener("click",fun);
+        mybtn.addEventListener("click",fun1);
+        mybtn.addEventListener("click",fun2);
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Factorial Calculation</title>
+</head>
+<body>
+	<h1>Factorial Calculation</h1>
+	<p>Enter a number to calculate its factorial:</p>
+	<input type="number" id="inputNumber">
+	<button onclick="calculateFactorial()">Calculate</button>
+	<p id="output"></p>
+
+	<script>
+
+		function factorial(num, callback) {
+			let result = 1;
+			for(let i = num; i >= 1; i--) {
+				result *= i;
+			}
+			callback(result);
+		}
+        function calculateFactorial() {
+			const num = document.getElementById("inputNumber").value;
+			factorial(num, function(result) {
+				document.getElementById("output").innerHTML = `Factorial of ${num} is ${result}`;
+			});
+		}
+	</script>
+</body>
+</html>
